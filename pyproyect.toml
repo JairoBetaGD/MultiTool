@@ -1,0 +1,13 @@
+[tool.flet]
+org = "com.fletapp"
+product = "FletApp"
+
+[tool.flet.app]
+path = "."
+
+[tool.flet.android]
+icon = "assets/icon.png"
+permissions = ["INTERNET"]
+
+[tool.flet.dependencies]
+packages = ["requests", "certifi"]
