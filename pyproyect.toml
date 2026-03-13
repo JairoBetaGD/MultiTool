@@ -1,38 +1,30 @@
 [project]
-name = "flet_app"
+name = "flet-mobile-template"
 version = "0.1.0"
-description = "Generic Flet application"
+description = "Template for building mobile apps with Flet"
 requires-python = ">=3.10"
+readme = "README.md"
 
-# Dependencia mínima para builds rápidos
 dependencies = [
-    "flet>=0.26.0"
+    "flet>=0.26,<1.0"
 ]
 
-# Dependencias opcionales
 [project.optional-dependencies]
 
 dev = [
     "black",
     "ruff",
     "pytest",
-    "rich"
 ]
 
 api = [
     "requests",
     "httpx",
     "pydantic",
-    "python-dotenv"
 ]
 
 database = [
     "aiosqlite"
-]
-
-utils = [
-    "loguru",
-    "orjson"
 ]
 
 mobile = [
@@ -40,26 +32,21 @@ mobile = [
     "aiosqlite"
 ]
 
-# Configuración de Flet
 [tool.flet]
 org = "com.example"
-product = "FletApp"
+product = "FletTemplate"
 company = "Example"
 build_number = 1
 
-# IMPORTANTE: main.py está en la raíz
 [tool.flet.app]
 path = "."
 
-# Icono de la app
 [tool.flet.android]
 icon = "assets/icon.png"
 
-# Splash screen opcional
 [tool.flet.splash]
 image = "assets/splash.png"
 background_color = "#ffffff"
 
-# Plugins Flutter opcionales
 [tool.flet.flutter]
 dependencies = []
