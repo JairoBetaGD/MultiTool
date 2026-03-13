@@ -4,15 +4,14 @@ version = "0.1.0"
 description = "Generic Flet application"
 requires-python = ">=3.10"
 
-# SOLO lo esencial para que el build APK sea rápido
+# Dependencia mínima para builds rápidos
 dependencies = [
     "flet>=0.26.0"
 ]
 
-# Dependencias opcionales para desarrollo o features
+# Dependencias opcionales
 [project.optional-dependencies]
 
-# desarrollo
 dev = [
     "black",
     "ruff",
@@ -20,7 +19,6 @@ dev = [
     "rich"
 ]
 
-# APIs
 api = [
     "requests",
     "httpx",
@@ -28,43 +26,40 @@ api = [
     "python-dotenv"
 ]
 
-# base de datos local
 database = [
     "aiosqlite"
 ]
 
-# utilidades
 utils = [
     "loguru",
     "orjson"
 ]
 
-# dependencias para móvil si se necesitan
 mobile = [
     "requests",
     "aiosqlite"
 ]
 
-# configuración principal de Flet
+# Configuración de Flet
 [tool.flet]
 org = "com.example"
 product = "FletApp"
 company = "Example"
 build_number = 1
 
-# carpeta donde está main.py
+# IMPORTANTE: main.py está en la raíz
 [tool.flet.app]
-path = "src"
+path = "."
 
-# icono de la app
+# Icono de la app
 [tool.flet.android]
 icon = "assets/icon.png"
 
-# splash screen opcional
+# Splash screen opcional
 [tool.flet.splash]
 image = "assets/splash.png"
 background_color = "#ffffff"
 
-# plugins flutter opcionales
+# Plugins Flutter opcionales
 [tool.flet.flutter]
 dependencies = []
